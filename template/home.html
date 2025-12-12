@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API STIK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>API STIK</h1>
+        <!--p>Desenvolvido por João Paulo Bezerra</p-->
+        <h2>Endpoints Disponíveis:</h2>
+
+        <h3>I. Movimentação e Logística</h3>
+        <ul>
+            <li><a href="/consulta/movimentacao">/consulta/movimentacao</a> - Status Atual da Movimentação (GET/POST/PUT)</li>
+            <li><a href="/consulta/movimentacao_historico">/consulta/movimentacao_historico</a> - Histórico Completo de Movimentações (GET)</li>
+            <li><a href="/consulta/embalagem">/consulta/embalagem</a> - Registro e Consulta de Embalagem (GET/POST)</li>
+        </ul>
+
+        <h3>II. Produção e Tinturaria</h3>
+        <ul>
+            <li><a href="/consulta/tinturariaDados">/consulta/tinturariaDados</a> - Programação da Tinturaria (Ordem de Produção) (GET)</li>
+            <li><a href="/consulta/tinturaria">/consulta/tinturaria</a> - Registro e Consulta de Tinturaria (Geral) (GET/POST)</li>
+            <li><a href="/consulta/operador">/consulta/operador</a> - Consulta Informações de Operador (Matrícula) (GET)</li>
+        </ul>
+
+        <h3>III. Usuários e Autenticação</h3>
+        <ul>
+            <li><a href="/consulta/usuarios">/consulta/usuarios</a> - Listar e Deletar Usuários (GET/DELETE)</li>
+            <li><a href="/consulta/cadastro">/consulta/cadastro</a> - Cadastrar Novo Usuário (POST)</li>
+            <li><a href="/consulta/login">/consulta/login</a> - Realizar Login (POST)</li>
+            <li><a href="/consulta/usuarios/alterar_senha">/consulta/usuarios/alterar_senha</a> - Alterar Senha (PUT)</li>
+        </ul>
+
+        <h3>IV. WMS</h3>
+        <ul>
+            <li><a href="/consulta/romaneio">/consulta/romaneio</a> - Consulta Romaneio (WMS) (GET)</li>
+            <li><a href="/consulta/wms/enderecos">/consulta/wms/enderecos</a> - Consulta Endereços (WMS) (GET)</li>
+            <li><a href="/consulta/wms/ruas">/consulta/wms/ruas</a> - Consulta Configuração de Ruas (WMS) (GET)</li>
+            <li><a href="/consulta/wms/usuarios">/consulta/wms/usuarios</a> - Consulta Usuários (TbUsr) (GET)</li>
+            <li><a href="/consulta/wms/objetos/1">/consulta/wms/objetos/&lt;id&gt;</a> - Consulta Objetos (GET)</li>
+            <li><a href="/consulta/wms/gerar_alocacao?data_inicio=2025-10-01&data_fim=2025-10-31">/consulta/wms/gerar_alocacao</a> - Gera Plano de Alocação (Slotting) (GET)</li>
+            <li><a href="/consulta/wms/movimentos">/consulta/wms/movimentos</a> - Consulta Histórico de Movimentos (GET)</li>
+            <li>/consulta/wms/movimentar (POST) - Registra uma nova movimentação (Entrada/Saída)</li>
+        </ul>
+        </ul>
+    </div>
+</body>
+</html>
